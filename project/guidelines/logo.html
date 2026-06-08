@@ -1,0 +1,28 @@
+<!-- @dsCard group="Brand" viewport="700x320" name="Logo" subtitle="Wordmark, monogram, light & dark" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 0; background: var(--surface-card); font-family: var(--font-ui); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; }
+  .cell { padding: 28px 32px; display: flex; align-items: center; gap: 18px; min-height: 110px; border-bottom: 1px solid var(--border-subtle); }
+  .cell.dark { background: var(--navy-900); }
+  .cell.right { border-left: 1px solid var(--border-subtle); }
+  .cell.dark.right { border-left-color: var(--border-on-dark); }
+  img { height: 48px; width: auto; }
+  .mono { height: 56px; }
+  .tag { font-size: 11px; color: var(--text-muted); margin-left: auto; }
+  .dark .tag { color: var(--text-on-dark-muted); }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="cell"><img src="../assets/logo-wordmark.svg" alt="Scollo Painting wordmark"><span class="tag">on light</span></div>
+    <div class="cell right dark"><img src="../assets/logo-wordmark-dark.svg" alt="Scollo Painting wordmark dark"><span class="tag">on navy</span></div>
+    <div class="cell"><img class="mono" src="../assets/logo-monogram.svg" alt="Scollo monogram"><span class="tag">monogram / favicon</span></div>
+    <div class="cell right dark"><img class="mono" src="../assets/logo-monogram.svg" alt="Scollo monogram"><span class="tag">app / avatar</span></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!-- @dsCard group="Brand" viewport="700x200" name="Motifs — gold rule & image scrim" subtitle="Section marker + photo protection gradient" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600&family=Hanken+Grotesk:wght@600&display=swap">
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-card); font-family: var(--font-ui); display: flex; gap: 24px; }
+  .col { flex: 1; }
+  .rule { width: 48px; height: 3px; background: var(--brand-accent); border-radius: var(--radius-pill); margin-bottom: 12px; }
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-accent); }
+  .scrim { position: relative; height: 120px; border-radius: var(--radius-md); overflow: hidden; background: repeating-linear-gradient(45deg,#5c6b7a,#5c6b7a 12px,#54626f 12px,#54626f 24px); }
+  .scrim::after { content:""; position:absolute; inset:0; background: linear-gradient(to top, rgba(15,32,52,0.92), rgba(15,32,52,0.1) 70%); }
+  .scrim span { position: absolute; left: 14px; bottom: 12px; z-index: 1; color: #fff; font-family: var(--font-display); font-size: 20px; font-weight: 600; }
+  .note { font-size: 11px; color: var(--text-muted); margin-top: 8px; }
+</style>
+</head>
+<body>
+  <div class="col">
+    <div class="rule"></div>
+    <div class="eyebrow">Section marker</div>
+    <div class="note">48×3px gold rule precedes section eyebrows &amp; headings.</div>
+  </div>
+  <div class="col">
+    <div class="scrim"><span>Before / after</span></div>
+    <div class="note">Navy→transparent scrim protects text over photography.</div>
+  </div>
+</body>
+</html>

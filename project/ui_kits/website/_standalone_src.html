@@ -1,0 +1,120 @@
+<!-- standalone export source — do not register as a card -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Painters in Stuart &amp; Palm Beach, FL | Scollo Painting Inc.</title>
+<meta name="description" content="Trusted painters in Stuart, FL with 45+ years' experience. Interior, exterior & commercial painting plus drywall repair. Call 561-306-1813 for a free quote.">
+<meta name="ext-resource-dependency" content="../../assets/logo-wordmark.svg" data-resource-id="logoLight" />
+<meta name="ext-resource-dependency" content="../../assets/logo-wordmark-dark.svg" data-resource-id="logoDark" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1759238136854-a43787126db7?fm=jpg&q=70&w=1400&auto=format&fit=crop" data-resource-id="imgInterior" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1717281234297-3def5ae3eee1?fm=jpg&q=70&w=1400&auto=format&fit=crop" data-resource-id="imgCrew" />
+<template id="__bundler_thumbnail" data-bg-color="#faf8f4">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#faf8f4"/>
+    <rect x="410" y="330" width="260" height="58" rx="10" fill="#c18a3d"/>
+    <rect x="410" y="410" width="260" height="58" rx="10" fill="#0f2034"/>
+    <text x="700" y="378" font-family="Georgia, serif" font-size="96" font-weight="600" fill="#0f2034">Scollo</text>
+    <text x="702" y="452" font-family="Arial, sans-serif" font-size="30" letter-spacing="10" fill="#7c7468">PAINTING INC.</text>
+  </svg>
+</template>
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap">
+<style>
+  html, body { margin: 0; }
+  body { background: var(--surface-page); }
+  svg.lucide { width: 1em; height: 1em; }
+  a { -webkit-tap-highlight-color: transparent; }
+
+  @media (max-width: 1000px) {
+    .hero-grid, .why-grid, .quote-grid { grid-template-columns: 1fr !important; }
+    .services-grid { grid-template-columns: 1fr 1fr !important; }
+    .why-items { grid-template-columns: 1fr 1fr !important; }
+    .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+    .hero-card { left: 16px !important; }
+  }
+  @media (max-width: 760px) {
+    .primary-nav, .header-actions { display: none !important; }
+    .menu-btn { display: inline-flex !important; }
+    .services-grid, .services-grid-2, .why-items, .form-grid, .footer-grid { grid-template-columns: 1fr !important; }
+    .service-row { grid-template-columns: 1fr !important; }
+  }
+</style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <!-- LocalBusiness JSON-LD (NAP + areaServed) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Painter",
+    "name": "Scollo Painting Inc.",
+    "telephone": "+1-561-306-1813",
+    "address": { "@type": "PostalAddress", "streetAddress": "848 S.E. Fleming Way", "addressLocality": "Stuart", "addressRegion": "FL", "postalCode": "34997", "addressCountry": "US" },
+    "openingHours": "Mo-Sa 09:00-17:00",
+    "paymentAccepted": "Cash, Check, Visa, Mastercard, Discover, American Express",
+    "areaServed": ["Stuart","Delray Beach","Boca Raton","Boynton Beach","Wellington","Palm Beach Gardens","West Palm Beach","Jupiter","Hobe Sound","Jensen Beach","Lake Worth","Highland Beach","Lighthouse Point","Fort Lauderdale","Pompano Beach","Coral Springs","Parkland","Deerfield Beach","Manalapan","North Palm Beach","Royal Palm Beach"]
+  }
+  </script>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@0.456.0/dist/umd/lucide.min.js"></script>
+  <script src="../../_ds_bundle.js"></script>
+
+  <script type="text/babel" src="icons.jsx"></script>
+  <script type="text/babel" src="site.jsx"></script>
+  <script type="text/babel" src="home.jsx"></script>
+  <script type="text/babel" src="quote.jsx"></script>
+
+  <script type="text/babel">
+    const { Header, Footer, CtaBand } = window;
+    function App() {
+      const [route, setRoute] = React.useState("home");
+      const rootRef = React.useRef(null);
+      const go = (r) => { setRoute(r); const el = rootRef.current; if (el) el.scrollTop = 0; };
+
+      React.useEffect(() => { if (window.lucide) window.lucide.createIcons({ attrs: { "stroke-width": 1.9 } }); });
+
+      let page;
+      if (route === "home") {
+        page = (
+          <React.Fragment>
+            <window.Hero onNavigate={go} />
+            <window.ServicesGrid onNavigate={go} />
+            <window.WhyUs />
+            <window.GallerySection />
+            <window.AreasSection onNavigate={go} />
+          </React.Fragment>
+        );
+      } else if (route === "quote") {
+        page = <window.QuoteScreen onNavigate={go} />;
+      } else if (route === "services") {
+        page = <window.ServicesScreen onNavigate={go} />;
+      } else {
+        const meta = {
+          about: ["About us", "Our story", "A family-rooted painting business that grew from a small operation into one of the region's most recognized names — built on quality work at fair, transparent prices."],
+          areas: ["Areas serviced", "Where we work", "Serving 20 communities across Palm Beach, Martin and Broward Counties, from Stuart to Fort Lauderdale."],
+          gallery: ["Project gallery", "Our work", "Before-and-after transformations from real residential and commercial projects."],
+          faq: ["Frequently asked questions", "Good to know", "Answers on scheduling, prep, pricing, and how we protect your home during a project."],
+          contact: ["Contact us", "Get in touch", "Reach our team by phone or the form — we'll get back to you within one business day."],
+        }[route] || ["Page", "", ""];
+        page = <window.SimpleScreen title={meta[0]} eyebrow={meta[1]} lead={meta[2]} crumb={meta[0]} onNavigate={go} />;
+      }
+
+      return (
+        <div ref={rootRef} data-scroll-root style={{ height: "100vh", overflowY: "auto", overflowX: "hidden" }}>
+          <Header route={route} onNavigate={go} />
+          <main>{page}</main>
+          <CtaBand onNavigate={go} />
+          <Footer onNavigate={go} />
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById("app")).render(<App />);
+  </script>
+</body>
+</html>

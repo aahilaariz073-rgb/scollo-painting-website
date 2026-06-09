@@ -1033,6 +1033,25 @@ li { margin-bottom: var(--space-2); }
 .about-stats-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: var(--space-7);
 }
+.stats-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: var(--space-7);
+}
+.stat-card {
+  text-align: center; padding: var(--space-6);
+  background: var(--surface-card); border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+}
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600; color: var(--amber-600);
+  letter-spacing: -0.02em; line-height: 1; margin-bottom: 8px;
+}
+.stat-label {
+  font-family: var(--font-ui); font-size: 14px;
+  font-weight: 600; color: var(--text-muted); text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
 .values-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: var(--space-6);
 }

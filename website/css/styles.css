@@ -797,8 +797,8 @@ li { margin-bottom: var(--space-2); }
 }
 
 /* === FOOTER === */
-.site-footer { background: var(--navy-950); color: var(--text-on-dark-muted); }
-.footer-inner { padding: var(--space-9) 0 var(--space-6); }
+.site-footer { background: var(--navy-950); color: var(--text-on-dark-muted); margin-top: var(--space-8); }
+.footer-inner { padding: var(--space-6) 0 var(--space-4); }
 .footer-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1.2fr;

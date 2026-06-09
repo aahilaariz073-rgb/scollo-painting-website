@@ -370,6 +370,7 @@ li { margin-bottom: var(--space-2); }
   border: 1px solid var(--amber-100);
 }
 .badge--navy { background: var(--navy-800); color: var(--text-on-dark); }
+.badge--amber-light { background: rgba(255,255,255,0.15); color: #ffffff; border: 1px solid rgba(255,255,255,0.3); }
 
 /* === CARD === */
 .card {

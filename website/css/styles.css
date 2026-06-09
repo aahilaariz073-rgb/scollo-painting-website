@@ -1079,8 +1079,9 @@ li { margin-bottom: var(--space-2); }
 .approach-inner { max-width: 760px; }
 .approach-text { display: flex; flex-direction: column; gap: 16px; }
 .approach-text .eyebrow { margin-bottom: 0; color: var(--amber-600) !important; }
-.approach-text h2 { margin: 0; font-family: var(--font-heading); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 600; line-height: 1.15; letter-spacing: -0.02em; color: var(--text-strong); }
-.approach-text p { margin: 0; font-size: 16px; line-height: 1.7; color: var(--text-body); }
+.approach-text h2 { margin: 0; font-family: var(--font-heading); font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 600; line-height: 1.2; letter-spacing: -0.02em; color: var(--text-strong); }
+.approach-text p { margin: 0; font-size: 15px; line-height: 1.7; color: var(--text-body); }
+.cta-band { margin-top: 0; }
 .value-item {
   display: flex; gap: 14px; align-items: flex-start;
 }

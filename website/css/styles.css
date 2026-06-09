@@ -624,14 +624,17 @@ li { margin-bottom: var(--space-2); }
   font-weight: 600; line-height: 1.04;
   letter-spacing: -0.025em; color: #ffffff;
   margin: 0 0 20px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
 }
 .hero-heading--light .accent-italic { color: var(--amber-400); }
 .hero-lead--light {
   font-size: 19px; line-height: 1.6;
-  color: rgba(255,255,255,0.85); margin: 0 0 30px; max-width: 520px;
+  color: #ffffff; margin: 0 0 30px; max-width: 520px;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.5);
 }
 .hero-trust--light .trust-item {
-  color: rgba(255,255,255,0.8);
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
 .hero-trust--light .trust-item svg { color: var(--amber-400); }
 .badge--outline-light {

@@ -743,8 +743,9 @@ li { margin-bottom: var(--space-2); }
   gap: 64px; align-items: center;
 }
 .why-items {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 28px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
 }
+.trust-item__icon { margin-bottom: var(--space-2); }
 
 /* === HOME: GALLERY === */
 .gallery-section { background: var(--surface-page); padding: var(--space-9) 0; }

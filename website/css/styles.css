@@ -1200,6 +1200,16 @@ li { margin-bottom: var(--space-2); }
 
 /* City/location page */
 .location-hero { background: var(--navy-900); padding: var(--space-9) 0; }
+.location-hero h1,
+.location-hero p { color: #ffffff; }
+.location-hero .breadcrumb { color: rgba(255,255,255,0.6); }
+.location-hero .breadcrumb a { color: rgba(255,255,255,0.6); }
+.location-hero .breadcrumb a:hover { color: #ffffff; }
+.location-hero .breadcrumb span,
+.location-hero .breadcrumb-current { color: rgba(255,255,255,0.9); }
+.location-hero .breadcrumb svg,
+.location-hero svg { color: rgba(255,255,255,0.5); }
+.eyebrow--light { color: var(--amber-400) !important; }
 .location-content { padding: var(--space-9) 0; }
 .location-services { margin-top: var(--space-7); }
 .location-service-row {

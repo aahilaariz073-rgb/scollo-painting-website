@@ -1078,7 +1078,8 @@ li { margin-bottom: var(--space-2); }
 .value-card p { font-size: 14.5px; line-height: 1.6; color: var(--text-body); margin: 0; }
 .approach-inner { max-width: 760px; }
 .approach-text { display: flex; flex-direction: column; gap: 16px; }
-.approach-text h2 { margin: 0; }
+.approach-text .eyebrow { margin-bottom: 0; }
+.approach-text h2 { margin: 0; font-family: var(--font-heading); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 600; line-height: 1.15; letter-spacing: -0.02em; color: var(--text-strong); }
 .approach-text p { margin: 0; font-size: 16px; line-height: 1.7; color: var(--text-body); }
 .value-item {
   display: flex; gap: 14px; align-items: flex-start;

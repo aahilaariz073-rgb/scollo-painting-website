@@ -620,6 +620,7 @@ li { margin-bottom: var(--space-2); }
   max-width: 680px;
 }
 .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.hero-actions { display: flex; flex-direction: row; align-items: center; gap: 14px; flex-wrap: wrap; }
 .hero-heading--light {
   font-family: var(--font-heading);
   font-size: clamp(2.6rem, 5vw, 4.25rem);

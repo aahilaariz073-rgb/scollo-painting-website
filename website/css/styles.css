@@ -254,7 +254,7 @@ li { margin-bottom: var(--space-2); }
   height: var(--header-h);
 }
 .header-logo { display: flex; align-items: center; flex-shrink: 0; }
-.header-logo img { height: 42px; }
+.header-logo img { height: 56px; }
 .header-nav {
   display: flex; gap: 4px; margin-left: 12px;
 }

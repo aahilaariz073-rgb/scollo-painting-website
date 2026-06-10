@@ -1526,24 +1526,10 @@ li { margin-bottom: var(--space-2); }
 }
 .chat-panel-head-inner { display: flex; align-items: center; gap: 10px; }
 .chat-logo {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--amber-600);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: .8rem;
-  color: #fff;
+  display: block;
+  height: 26px;
+  width: auto;
   flex-shrink: 0;
-  letter-spacing: .02em;
-}
-.chat-panel-head span {
-  font-family: var(--font-heading);
-  font-size: .975rem;
-  font-weight: 600;
 }
 .chat-panel-close {
   background: none;

@@ -199,8 +199,7 @@
       '<div class="chat-panel" id="chatPanel">' +
         '<div class="chat-panel-head">' +
           '<div class="chat-panel-head-inner">' +
-            '<div class="chat-logo">SP</div>' +
-            '<span>Have a question?</span>' +
+            '<img src="/assets/logo-dark.svg" alt="Scollo Painting Inc." class="chat-logo" width="110" height="25">' +
           '</div>' +
           '<button class="chat-panel-close" id="chatClose" aria-label="Close chat">' +
             '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' +

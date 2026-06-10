@@ -225,10 +225,13 @@
           '</div>' +
         '</div>' +
       '</div>' +
-      '<button class="chat-bubble" id="chatBubble" aria-label="Chat with us" aria-expanded="false">' +
-        '<svg class="icon-chat" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>' +
-        '<svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' +
-      '</button>';
+      '<div class="chat-bubble-row">' +
+        '<span class="chat-bubble-label" id="chatLabel">Have a question?</span>' +
+        '<button class="chat-bubble" id="chatBubble" aria-label="Chat with us" aria-expanded="false">' +
+          '<svg class="icon-chat" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>' +
+          '<svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' +
+        '</button>' +
+      '</div>';
 
     document.body.appendChild(wrap);
 
@@ -240,8 +243,14 @@
     var frame    = document.getElementById('chatFrame');
     document.getElementById('chatPage').value = window.location.pathname;
 
-    function openPanel()  { panel.classList.add('open'); bubble.classList.add('open'); bubble.setAttribute('aria-expanded', 'true'); }
+    var label = document.getElementById('chatLabel');
+
+    function hideLabel() { if (label) { label.classList.add('hidden'); } }
+    function openPanel()  { panel.classList.add('open'); bubble.classList.add('open'); bubble.setAttribute('aria-expanded', 'true'); hideLabel(); }
     function closePanel() { panel.classList.remove('open'); bubble.classList.remove('open'); bubble.setAttribute('aria-expanded', 'false'); }
+
+    /* Auto-hide label after 6 s */
+    setTimeout(hideLabel, 6000);
 
     bubble.addEventListener('click', function () { panel.classList.contains('open') ? closePanel() : openPanel(); });
     closeBtn.addEventListener('click', closePanel);

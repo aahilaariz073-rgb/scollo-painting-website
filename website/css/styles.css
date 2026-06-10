@@ -1497,6 +1497,34 @@ li { margin-bottom: var(--space-2); }
 .chat-bubble.open .icon-chat  { display: none; }
 .chat-bubble.open .icon-close { display: block; }
 
+.chat-bubble-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.chat-bubble-label {
+  background: #fff;
+  color: var(--navy-900);
+  font-family: var(--font-ui);
+  font-size: .875rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 20px;
+  box-shadow: 0 2px 12px rgba(15,32,52,.18);
+  white-space: nowrap;
+  animation: chat-label-in .4s var(--ease-out) .8s both;
+  transition: opacity .3s, transform .3s;
+}
+.chat-bubble-label.hidden {
+  opacity: 0;
+  transform: translateX(6px);
+  pointer-events: none;
+}
+@keyframes chat-label-in {
+  from { opacity: 0; transform: translateX(10px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
 /* Panel */
 .chat-panel {
   width: 320px;

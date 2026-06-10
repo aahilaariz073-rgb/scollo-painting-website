@@ -189,6 +189,73 @@
     });
   }
 
+  /* ── Chat widget ── */
+  function initChatWidget() {
+    var wrap = document.createElement('div');
+    wrap.className = 'chat-widget';
+    wrap.id = 'chatWidget';
+    wrap.innerHTML =
+      '<iframe name="chatFrame" id="chatFrame" aria-hidden="true" tabindex="-1"></iframe>' +
+      '<div class="chat-panel" id="chatPanel">' +
+        '<div class="chat-panel-head">' +
+          '<div class="chat-panel-head-inner">' +
+            '<div class="chat-logo">SP</div>' +
+            '<span>Have a question?</span>' +
+          '</div>' +
+          '<button class="chat-panel-close" id="chatClose" aria-label="Close chat">' +
+            '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' +
+          '</button>' +
+        '</div>' +
+        '<div class="chat-panel-body">' +
+          '<p class="chat-intro">Enter your question below and a representative will get right back to you.</p>' +
+          '<form id="chatForm" action="https://formsubmit.co/hello@skyliftgroup.com" method="POST" target="chatFrame">' +
+            '<input type="hidden" name="_subject" value="Chat Inquiry — Scollo Painting Inc.">' +
+            '<input type="hidden" name="_captcha" value="false">' +
+            '<input type="hidden" name="_page" id="chatPage" value="">' +
+            '<div class="chat-field"><input type="text" name="name" class="chat-input" placeholder="Name *" required></div>' +
+            '<div class="chat-field"><input type="tel" name="phone" class="chat-input" placeholder="Phone *" required></div>' +
+            '<div class="chat-field"><textarea name="message" class="chat-textarea" placeholder="How can we help?" rows="3"></textarea></div>' +
+            '<button type="submit" class="chat-submit">Send ' +
+              '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>' +
+            '</button>' +
+          '</form>' +
+          '<div class="chat-success" id="chatSuccess" hidden>' +
+            '<svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>' +
+            '<p class="chat-success-title">We\'ll be in touch soon!</p>' +
+            '<p class="chat-success-sub">A member of our team will call or email you within one business day.</p>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+      '<button class="chat-bubble" id="chatBubble" aria-label="Chat with us" aria-expanded="false">' +
+        '<svg class="icon-chat" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>' +
+        '<svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' +
+      '</button>';
+
+    document.body.appendChild(wrap);
+
+    var bubble   = document.getElementById('chatBubble');
+    var panel    = document.getElementById('chatPanel');
+    var closeBtn = document.getElementById('chatClose');
+    var form     = document.getElementById('chatForm');
+    var success  = document.getElementById('chatSuccess');
+    var frame    = document.getElementById('chatFrame');
+    document.getElementById('chatPage').value = window.location.pathname;
+
+    function openPanel()  { panel.classList.add('open'); bubble.classList.add('open'); bubble.setAttribute('aria-expanded', 'true'); }
+    function closePanel() { panel.classList.remove('open'); bubble.classList.remove('open'); bubble.setAttribute('aria-expanded', 'false'); }
+
+    bubble.addEventListener('click', function () { panel.classList.contains('open') ? closePanel() : openPanel(); });
+    closeBtn.addEventListener('click', closePanel);
+
+    var submitted = false;
+    form.addEventListener('submit', function () { submitted = true; });
+    frame.addEventListener('load', function () {
+      if (!submitted) return;
+      form.style.display = 'none';
+      success.hidden = false;
+    });
+  }
+
   /* ── Init ── */
   document.addEventListener('DOMContentLoaded', function () {
     initStickyHeader();
@@ -200,5 +267,6 @@
     initIcons();
     initReveal();
     initLightbox();
+    initChatWidget();
   });
 })();

@@ -65,56 +65,25 @@
     });
   }
 
-  /* ── Form submit helper ── */
-  function submitToFormsubmit(form, success, subject, btnLabel) {
-    var btn = form.querySelector('[type=submit]');
-    btn.disabled = true;
-    btn.textContent = 'Sending…';
-
-    var data = { _subject: subject };
-    new FormData(form).forEach(function (val, key) { data[key] = val; });
-
-    fetch('https://formsubmit.co/ajax/hello@skyliftgroup.com', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(data)
-    })
-    .then(function (r) { return r.json(); })
-    .then(function (res) {
-      if (res.success === 'true' || res.success === true) {
-        form.style.display = 'none';
-        if (success) { success.hidden = false; success.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
-      } else {
-        btn.disabled = false; btn.textContent = btnLabel;
-        alert('Something went wrong. Please call us at 561-306-1813.');
-      }
-    })
-    .catch(function () {
-      btn.disabled = false; btn.textContent = btnLabel;
-      alert('Something went wrong. Please call us at 561-306-1813.');
-    });
-  }
-
-  /* ── Quote form ── */
+  /* ── Quote / Contact form success on redirect back ── */
   function initQuoteForm() {
     var form    = document.getElementById('quoteForm');
     var success = document.getElementById('quoteSuccess');
-    if (!form) return;
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      submitToFormsubmit(form, success, 'New Quote Request — Scollo Painting Inc.', 'Request my free quote');
-    });
+    if (!form && !success) return;
+    if (window.location.search.indexOf('sent=1') !== -1) {
+      if (form)    form.style.display = 'none';
+      if (success) { success.hidden = false; success.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+    }
   }
 
-  /* ── Contact form ── */
   function initContactForm() {
     var form    = document.getElementById('contactForm');
     var success = document.getElementById('contactSuccess');
-    if (!form) return;
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      submitToFormsubmit(form, success, 'New Contact Message — Scollo Painting Inc.', 'Send message');
-    });
+    if (!form && !success) return;
+    if (window.location.search.indexOf('sent=1') !== -1) {
+      if (form)    form.style.display = 'none';
+      if (success) { success.hidden = false; success.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+    }
   }
 
   /* ── Lucide icons ── */

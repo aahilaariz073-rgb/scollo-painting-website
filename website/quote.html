@@ -93,7 +93,10 @@
 
           <!-- Form Card -->
           <div class="quote-form-card">
-            <form class="quote-form" id="quoteForm" novalidate>
+            <form class="quote-form" id="quoteForm" action="https://formsubmit.co/hello@skyliftgroup.com" method="POST">
+              <input type="hidden" name="_subject" value="New Quote Request — Scollo Painting Inc.">
+              <input type="hidden" name="_next" value="https://scollopaintingfl.com/quote.html?sent=1">
+              <input type="hidden" name="_captcha" value="false">
               <div class="form-group">
                 <label for="fullName" class="form-label">Full name <span class="form-required" aria-hidden="true">*</span></label>
                 <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Jane Smith" required autocomplete="name">

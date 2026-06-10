@@ -150,7 +150,10 @@
           <!-- Contact Form -->
           <div class="contact-form-wrap">
             <h2>Send a message</h2>
-            <form class="contact-form" id="contactForm" novalidate>
+            <form class="contact-form" id="contactForm" action="https://formsubmit.co/hello@skyliftgroup.com" method="POST">
+              <input type="hidden" name="_subject" value="New Contact Message — Scollo Painting Inc.">
+              <input type="hidden" name="_next" value="https://scollopaintingfl.com/contact.html?sent=1">
+              <input type="hidden" name="_captcha" value="false">
               <div class="form-group">
                 <label for="contactName" class="form-label">Full name <span class="form-required" aria-hidden="true">*</span></label>
                 <input type="text" id="contactName" name="name" class="form-input" placeholder="Jane Smith" required autocomplete="name">

@@ -134,7 +134,7 @@
   --container-max:    1200px;
   --container-narrow: 760px;
   --gutter:           clamp(1.25rem, 4vw, 3rem);
-  --header-h:         84px;
+  --header-h:         108px;
 
   /* Motion */
   --ease-out:    cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -254,7 +254,7 @@ li { margin-bottom: var(--space-2); }
   height: var(--header-h);
 }
 .header-logo { display: flex; align-items: center; flex-shrink: 0; }
-.header-logo img { height: 70px; }
+.header-logo img { height: 96px; }
 .header-nav {
   display: flex; gap: 4px; margin-left: 12px;
 }

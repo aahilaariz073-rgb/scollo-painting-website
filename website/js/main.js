@@ -116,10 +116,22 @@
     });
   }
 
+  /* ── Mobile dropdown accordions ── */
+  function initMobileDropdowns() {
+    document.querySelectorAll('.mobile-nav-dropdown-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var list = btn.nextElementSibling;
+        var isOpen = list.classList.toggle('open');
+        btn.classList.toggle('open', isOpen);
+      });
+    });
+  }
+
   /* ── Init ── */
   document.addEventListener('DOMContentLoaded', function () {
     initStickyHeader();
     initMobileMenu();
+    initMobileDropdowns();
     initBeforeAfter();
     initQuoteForm();
     initIcons();

@@ -249,29 +249,31 @@ li { margin-bottom: var(--space-2); }
   -webkit-backdrop-filter: saturate(140%) blur(12px);
   border-bottom-color: var(--border-subtle);
 }
+.site-header .container { max-width: 1320px; }
 .header-inner {
-  display: flex; align-items: center; gap: 24px;
+  display: flex; align-items: center; gap: 18px;
   height: var(--header-h);
 }
 .header-logo { display: flex; align-items: center; flex-shrink: 0; }
 .header-logo img { height: 120px; }
 .header-nav {
-  display: flex; gap: 4px; margin-left: 12px;
+  display: flex; gap: 2px; margin-left: 8px;
 }
 .header-nav a {
   font-family: var(--font-ui);
   font-size: 14.5px; font-weight: 600;
   color: var(--stone-600);
-  padding: 8px 12px;
+  padding: 8px 9px;
   border-radius: var(--radius-sm);
   text-decoration: none;
+  white-space: nowrap;
   transition: color var(--dur-fast);
 }
 .header-nav a:hover { color: var(--navy-900); }
 .header-nav a[aria-current="page"] { color: var(--amber-700); }
 .header-actions {
   margin-left: auto;
-  display: flex; align-items: center; gap: 18px;
+  display: flex; align-items: center; gap: 14px;
 }
 .menu-btn {
   display: none; margin-left: auto;
@@ -311,7 +313,7 @@ li { margin-bottom: var(--space-2); }
   font-family: var(--font-ui);
   font-size: 14.5px; font-weight: 600;
   color: var(--stone-600);
-  padding: 8px 12px;
+  padding: 8px 9px;
   border-radius: var(--radius-sm);
   background: none; border: none; cursor: pointer;
   text-decoration: none;
@@ -560,6 +562,7 @@ li { margin-bottom: var(--space-2); }
   display: inline-flex; align-items: center; gap: 8px;
   font-family: var(--font-ui); font-weight: 700; font-size: 15px;
   color: var(--navy-900); text-decoration: none;
+  white-space: nowrap;
   transition: color var(--dur-fast);
 }
 .phone-link:hover { color: var(--amber-600); }
@@ -1438,10 +1441,12 @@ li { margin-bottom: var(--space-2); }
   .about-stats-grid { grid-template-columns: 1fr 1fr; }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1320px) {
   .header-nav, .header-actions { display: none; }
   .menu-btn { display: inline-flex; }
+}
 
+@media (max-width: 760px) {
   .hero-grid { gap: 32px; }
   .hero-float-card { display: none; }
   .hero-review-card--float { display: none; }

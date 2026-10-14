@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://scollopainting.com/sitemap.xml
+Sitemap: https://www.scollopainting.com/sitemap.xml
